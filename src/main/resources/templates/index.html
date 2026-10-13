@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index4</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<a  href="?language=en" data-th-text="#{label.lang.en}" th:classappend="__${#locale}__ == 'en' ? 'bg-blue-500 text-white' : ''"></a>
+<a  href="?language=ru" data-th-text="#{label.lang.ru}" th:classappend="__${#locale}__ == 'ru' ? 'bg-blue-500 text-white' : ''"></a>
+<hr/>
+<th th:text="#{profile.titleLabel}"></th>
+<th th:text="#{profile.annotationLabel}"></th>
+<br/>
+<img th:attr="src=@{/img/polack.png}"  />
+
+<hr/>
+<form action="multi" method="post">
+    <input id="digit"  type="text" name="num" value="7"/>
+    <input type="submit" name="submit" value="Push*3"/>
+</form>
+</body>
+</html>

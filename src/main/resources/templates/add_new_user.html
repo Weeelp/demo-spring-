@@ -1,0 +1,23 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi_AddUser</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+</head>
+<body>
+<p>The result is: <span th:text="${res_num}"></span></p>
+<hr/>
+Add User Form
+<hr/>
+<form action="add_user" method="post">
+  Login  <input type="text" name="firstname" value=""/>
+    <br/> Password
+    <input type="text" name="password" value=""/>
+    <br/> Phone
+    <input type="text" name="phone" value=""/>
+    <br/> Role
+    <input type="text" name="role" value=""/>
+    <input type="submit" name="submit" value="Add"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+
+</head>
+<p>The result is: <span th:text="${attr}"></span></p>
+<br/>
+Users table
+<table>
+<tr th:each="user: ${users_all}">
+    <td th:text="${user.userId}" />
+    <td th:text="${user.firstname}" />
+    <td th:text="${user.password}" />
+    <td th:text="${user.phone}" />
+</tr>
+</table>
+</body>
+</html>
